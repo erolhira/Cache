@@ -1,0 +1,20 @@
+<near-scheme>
+	<scheme-name>example-near</scheme-name>
+
+	<front-scheme>
+		<local-scheme>
+			<scheme-ref>example-binary-backing-map</scheme-ref>
+			<high-units>{front-size-limit 0}</high-units>
+			<unit-calculator>FIXED</unit-calculator>
+		</local-scheme>
+	</front-scheme>
+
+	<back-scheme>
+		<distributed-scheme>
+			<scheme-ref>example-distributed</scheme-ref>
+		</distributed-scheme>
+	</back-scheme>
+
+	<invalidation-strategy>present</invalidation-strategy>
+	<autostart>true</autostart>
+</near-scheme>

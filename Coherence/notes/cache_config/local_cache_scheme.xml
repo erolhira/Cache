@@ -1,0 +1,11 @@
+<local-scheme>
+	<scheme-name>example-binary-backing-map</scheme-name>
+
+	<eviction-policy>HYBRID</eviction-policy>
+	<high-units>{back-size-limit 0}</high-units>
+	<unit-calculator>BINARY</unit-calculator> <!-- fixed or binary is used to determine the size of the cache entries. -->
+	<expiry-delay>{back-expiry 1h}</expiry-delay>
+	<flush-delay>1m</flush-delay>
+
+	<cachestore-scheme></cachestore-scheme>
+</local-scheme>

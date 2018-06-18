@@ -1,0 +1,33 @@
+<distributed-scheme>
+	<scheme-name>example-distributed</scheme-name>
+	<service-name>DistributedCache</service-name>
+	<backing-map-scheme>
+		<read-write-backing-map-scheme>
+			<internal-cache-scheme>
+				<local-scheme />
+			</internal-cache-scheme>
+			<cachestore-scheme>
+				<class-scheme>
+					<class-name>
+						com.tangosol.coherence.jpa.JpaCacheStore
+					</class-name>
+					<init-params>
+						<init-param>
+							<param-type>java.lang.String</param-type>
+							<param-value>{cache-name}</param-value>
+						</init-param>
+						<init-param>
+							<param-type>java.lang.String</param-type>
+							<param-value>{class-name}</param-value>
+						</init-param>
+						<init-param>
+							<param-type>java.lang.String</param-type>
+							<param-value>PersistenceUnit</param-value>
+						</init-param>
+					</init-params>
+				</class-scheme>
+			</cachestore-scheme>
+		</read-write-backing-map-scheme>
+	</backing-map-scheme>
+	<autostart>true</autostart>
+</distributed-scheme>

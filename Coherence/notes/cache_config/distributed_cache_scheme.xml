@@ -1,0 +1,12 @@
+<distributed-scheme> <!-- tells us that any cache that uses this scheme will use a partitioned topology -->
+	<scheme-name>example-distributed</scheme-name> <!-- we can later use this name within cache mappings and when referencing a caching scheme from another caching scheme -->
+	<service-name>DistributedCache</service-name> <!-- the name of the cache service that all caches using this particular scheme will belong to. can be any name that is meaningful to you -->
+	
+	<backing-map-scheme> <!-- defines the type of the backing map we want all caches mapped to this caching scheme to use. -->
+		<local-scheme> <!-- we are telling Coherence to use local cache as a backing map. Note that while many named caches can be mapped to this particular caching scheme, each of them will have its own instance of the local cache as a backing map.-->
+			<scheme-ref>example-binary-backing-map</scheme-ref> <!-- tells us that the configuration for the backing map should be loaded from another caching scheme definition, example-binary-backing-map. This is a very useful feature, as it allows you to compose new schemes from the existing ones, without having to repeat yourself. -->
+		</local-scheme>
+	</backing-map-scheme>
+
+	<autostart>true</autostart> <!-- determines if the cache service for the scheme will be started automatically when the node starts. -->
+</distributed-scheme>

@@ -1,0 +1,26 @@
+<cache-mapping>
+	<cache-name>repl-*</cache-name>
+	<scheme-name>example-replicated</scheme-name>
+</cache-mapping>
+
+<cache-mapping>
+	<cache-name>near-accounts</cache-name>
+	<scheme-name>example-near</scheme-name>
+	<init-params>
+		<init-param>
+			<param-name>front-size-limit</param-name>
+			<param-value>1000</param-value>
+		</init-param>
+	</init-params>
+</cache-mapping>
+
+<cache-mapping>
+	<cache-name>dist-*</cache-name>
+	<scheme-name>example-distributed</scheme-name>
+	<init-params>
+		<init-param>
+			<param-name>back-size-limit</param-name>
+			<param-value>8388608</param-value>
+		</init-param>
+	</init-params>
+</cache-mapping>
